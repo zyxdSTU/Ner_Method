@@ -1,0 +1,13 @@
+data:
+  trainDataPath: './data/train.char.bmes'
+  validDataPath: './data/dev.char.bmes'
+  testDataPath: './data/test.char.bmes'
+model:
+  embeddingSize: 128
+  hiddenSize: 128
+  batchSize: 50
+  epochNum: 100
+  earlyStop: 15
+  learningRate: 0.0001
+  modelSavePath: './data/model.pkl'
+  dropout: 0.5
