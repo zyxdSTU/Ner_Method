@@ -24,6 +24,9 @@ from bilstm_crf import bilstmCRFTrain
 from transformer_crf import Transformer_CRF
 from transformer_crf import transformerCRFTrain
 from transformer_crf import transformerCRFEval
+from cnn import CNN
+from cnn import cnnTrain
+from cnn import cnnEval
 
 import sys
 from seqeval.metrics import f1_score, accuracy_score, classification_report
@@ -84,7 +87,11 @@ def main(config):
         net = Transformer_CRF(config)
         train = transformerCRFTrain
         eval = transformerCRFEval
-
+    
+    if modelName == 'cnn':
+        net = CNN(config)
+        train = cnnTrain
+        eval = cnnEval
 
     net = net.to(DEVICE)
 

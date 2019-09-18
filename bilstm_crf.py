@@ -28,7 +28,7 @@ class BiLSTM_CRF(nn.Module):
         super().__init__()
         self.embeddingSize = config['model']['embeddingSize']
         self.hiddenSize = config['model']['hiddenSize']
-        self.wordDictSize = len(wordDict)
+            
         self.DEVICE = config['DEVICE']
         self.dropout = nn.Dropout(config['model']['dropout'])
 
